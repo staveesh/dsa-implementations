@@ -30,7 +30,7 @@ void isPrime2(int a){
     else
       cout << "NO" << endl;
 }
-// Sieve of Eratosthenes - Same complexity but also generates all prime numbers till a.
+// Sieve of Eratosthenes - O(NloglogN). Also generates all prime numbers till a.
 void isPrime3(int a){
   bool isPrime[a+1];
   for(int i = 1; i <= a; i++)
