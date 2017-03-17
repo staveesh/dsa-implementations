@@ -4,18 +4,18 @@ using namespace std;
 
 int arr[9] = {1,2,3,4,5,7,8,9,10};
 
-// Returns the largest number <= the given key.
+// Returns the smallest number >= the given key.
 int search(int s, int hi, int lo){
 	while(hi - lo > 1){
 		int mid = lo + (hi-lo)/2;
-		if(arr[mid] <= s)
-			lo = mid;
-		else
+		if(arr[mid] >= s)
 			hi = mid;
+		else
+			lo = mid;
 	}
-	return arr[lo];
+	return hi;
 }
-int floor(int s, int size){
+int ceiling(int s, int size){
 	if(s < arr[0])
 		return -1;
 	else
@@ -24,7 +24,7 @@ int floor(int s, int size){
 int main(){
 	int toSearchFor;
 	cin >> toSearchFor;
-	int result = floor(toSearchFor,9);
+	int result = ceiling(toSearchFor,9);
 	cout << result << endl;
 	return 0;
 }

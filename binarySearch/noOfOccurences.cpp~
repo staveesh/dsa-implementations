@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int arr[11] = {1,2,2,2,2,2,2,2,2,5,9};
+int arr[10] = {1,2,2,2,2,2,2,2,2,5,9};
 
 int getLeftPosition(int s, int hi, int lo){
 	while(hi - lo > 1){

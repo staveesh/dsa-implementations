@@ -31,7 +31,7 @@ void Union(int a, int b){
 	}
 }
 bool find(int a, int b){
-	return (root(a) == root(b)); 
+	return (root(a) == root(b));
 }
 int main(){
 	priority_queue<pair<int, pair<int, int> > > q;
